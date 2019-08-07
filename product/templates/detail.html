@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="jumbotron mt-5">
+  <h1 class="display-5">{{nono.name}}</h1>
+  <hr class="my-4">
+  <p class="lead">대체상품</p>
+  <p>{{nono.replace}}</p>
+  <a class="btn btn-warning btn-lg mt-5" href="/product/{{nono.id}}/edit/" role="button">수정</a>
+  <a class="btn btn-danger btn-lg mt-5" href="/product/{{nono.id}}/delete/" role="button" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+</div>
+{% endblock %}
